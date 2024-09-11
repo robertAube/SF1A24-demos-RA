@@ -2,8 +2,12 @@ public class Cours03_parametres {
     //ALT-Insert
     public Cours03_parametres() {
 
-
+        flkdsjflkaf(3);
         tester_afficher_additionDeNombres();
+    }
+
+    private void flkdsjflkaf(int i) {
+
     }
 
     private void tester_afficher_additionDeNombres() {

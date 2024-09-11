@@ -9,6 +9,7 @@ public class Cours03_parseInt {
         afficherParsInt("allo");
     }
 
+    //signature de méthode
     private void afficherParsInt(String strNombre) {
         int intNombre;
 
