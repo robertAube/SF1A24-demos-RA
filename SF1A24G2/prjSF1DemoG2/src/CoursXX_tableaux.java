@@ -1,5 +1,5 @@
-public class Cours13c_tableaux {
-    public Cours13c_tableaux() {
+public class CoursXX_tableaux {
+    public CoursXX_tableaux() {
         jouerAvecTableau();
     }
 
@@ -8,6 +8,6 @@ public class Cours13c_tableaux {
     }
 
     public static void main(String[] args) {
-        new Cours13c_tableaux();
+        new CoursXX_tableaux();
     }
 }
