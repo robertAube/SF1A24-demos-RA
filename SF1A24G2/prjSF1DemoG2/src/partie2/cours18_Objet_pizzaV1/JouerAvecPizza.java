@@ -1,14 +1,48 @@
-package partie2.cours18_Objet;
+package partie2.cours18_Objet_pizzaV1;
 
 public class JouerAvecPizza {
     public JouerAvecPizza() {
 //        creerUnePizza();
-//        jouerAvecNPizza();
+        jouerAvecNPizza(6);
 //        tester_getEtSetVitesse();
-        vitesseSaisiParUsager();
+//        vitesseSaisieParUsager();
     }
 
-    private void vitesseSaisiParUsager() {
+    private void jouerAvecNPizza(int n) {
+        String[] listeCouleur = {"bleu", "rouge", "jaune", "violet"};
+        Pizza[] tabPizza = new Pizza[n];
+
+        for (int i = 0; i < n; i++) {
+            tabPizza[i] = new Pizza(i * 10, i * 100, i, listeCouleur[i % (listeCouleur.length)]);
+        }
+
+        afficherPizzas(tabPizza);
+
+        avancerPizzaA(tabPizza, 1000);
+
+        afficherPizzas(tabPizza);
+    }
+
+    private void afficherPizzas(Pizza[] tabPizza) {
+        for (int i = 0; i < tabPizza.length; i++) {
+            tabPizza[i].setVitesse(1);
+            System.out.println(tabPizza[i].toString());
+        }
+    }
+
+    private void avancerPizzaA(Pizza[] tPizza, int limiteX) {
+        for (int i = 0; i < tPizza.length; i++) {
+            avancerPizzaA(tPizza[i], limiteX);
+        }
+    }
+
+    private void avancerPizzaA(Pizza pizza, int limiteX) {
+        while (pizza.getX() < limiteX) {
+            pizza.avancerX();
+        }
+    }
+
+    private void vitesseSaisieParUsager() {
         Pizza p = null;
         int vitesseLu;
 
@@ -28,7 +62,7 @@ public class JouerAvecPizza {
     private void tester_getEtSetVitesse() {
         Pizza p;
 
-        p = new Pizza(0,0, -1, "bleu");
+        p = new Pizza(0, 0, -1, "bleu");
 
         System.out.println(p);
 
@@ -43,22 +77,11 @@ public class JouerAvecPizza {
         System.out.println(p.getVitesse());
     }
 
-    private void jouerAvecNPizza() {
-        String[] listeCouleur = {"bleu", "rouge", "jaune", "violet"};
-        Pizza[] tabPizza = new Pizza[listeCouleur.length];
-
-        for (int i = 0; i < listeCouleur.length; i++) {
-            tabPizza[i] = new Pizza(i *10, i *100, i, listeCouleur[i]);
-        }
-        for (int i = 0; i < listeCouleur.length; i++) {
-            System.out.println(tabPizza[i].toString());
-        }
-    }
 
     private void creerUnePizza() {
         Pizza p;
 
-        p = new Pizza(0,0, 1, "bleu");
+        p = new Pizza(0, 0, 1, "bleu");
 
 //        p.couleur = "rouge"; //pas accessible parce que c'est encapsulé (private)
         System.out.println(p);

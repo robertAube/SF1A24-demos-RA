@@ -1,4 +1,4 @@
-package partie2.cours18_Objet;
+package partie2.cours20_Objet_pizzaV2;
 
 import java.util.Scanner;
 

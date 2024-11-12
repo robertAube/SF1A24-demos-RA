@@ -1,17 +1,17 @@
 package partie2.Cours20_objet;
 
-public class Coordonne {
-    //constante de classe (static)
+public class Coordonnee {
+    //Constantes de classe (static)
     //constante : valeur qui ne peut jamais changer. norme : Toujours en majuscule
-    //static : appartient à la classe. existe sans faire d'instance
-    //final : la variabale ne peut pas changer après son initialisation
+    //static : appartient à la classe. Existe sans faire d'instance
+    //final : la variable ne peut pas changer après son initialisation
     public static final int MIN_XY = -100;
     public static final int MAX_XY = -MIN_XY;
 
     private int x;
     private int y;
 
-    public Coordonne(int x, int y) {
+    public Coordonnee(int x, int y) {
         this.x = x;
         this.y = y;
     }

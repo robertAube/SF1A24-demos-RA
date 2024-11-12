@@ -6,17 +6,15 @@ public class JouerAvecPizza {
         //jouerAvecNPizza();
 
         //tester_getSetVitesse();
-        vitesseSaisiParUsager();
+        vitesseSaisieParUsager();
     }
 
-    private void vitesseSaisiParUsager() {
+    private void vitesseSaisieParUsager() {
         Pizza p;
         int vitesseLu;
 
-
         do {
             vitesseLu = Util.lireInt("Donnez la vitesse : ");
-
         } while (!Pizza.vitesseEstValide(vitesseLu));
 
         p = new Pizza(1,2,"jaune", 1);

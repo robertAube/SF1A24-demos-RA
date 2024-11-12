@@ -3,9 +3,9 @@ package partie2.Cours19_objet;
 public class Pizza {
     //Attributs ou variables d'instance
     //Pour que ces variables existent, la classe doit être instanciée avec le new
-    //encapsulation des attributs: on met les attributs private pour évier leur modification à l'extérieur de la classe
+    //encapsulation des attributs : on met les attributs private pour évier leur modification à l'extérieur de la classe
 
-    private int x; //les attributs doivent être toujours encapsulé donc private
+    private int x; //les attributs doivent être toujours encapsulés donc private
     private int y;
     private String couleur;
     private int vitesse;
