@@ -25,7 +25,6 @@ public class JouerAvecPizza {
 
     private void afficherPizzas(Pizza[] tabPizza) {
         for (int i = 0; i < tabPizza.length; i++) {
-            tabPizza[i].setVitesse(1);
             System.out.println(tabPizza[i].toString());
         }
     }

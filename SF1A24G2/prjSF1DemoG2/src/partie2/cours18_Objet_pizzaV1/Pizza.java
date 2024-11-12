@@ -7,7 +7,6 @@ public class Pizza {
     private int x;
     private int y;
     private int vitesse;
-
     private String couleur;
 
     public Pizza(int x, int y, int vitesse, String couleur) {
@@ -40,8 +39,6 @@ public class Pizza {
     public void avancerX() {
         x += vitesse;
     }
-
-
 
     @Override
     public String toString() {

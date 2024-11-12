@@ -1,20 +1,22 @@
-package partie2.Cours20_objet;
+package partie2.Cours20_objet_pizzaV2;
 
 public class Pizza {
     //Attributs ou variables d'instance
     //Pour que ces variables existent, la classe doit être instanciée avec le new
     //encapsulation des attributs : on met les attributs private pour évier leur modification à l'extérieur de la classe
 
-    private int x; //les attributs doivent être toujours encapsulé donc private
-    private int y;
+    private Coordonnee position; //les attributs doivent être toujours encapsulé donc private
     private String couleur;
     private int vitesse;
 
     public Pizza(int x, int y, String couleur, int vitesse) {
-        this.x = x; //le mot clé this fait référence à l'instance courante.
-        this.y = y; //attribut est mauve & variable locale est noir
+        this.position = new Coordonnee(x, y); //le mot clé this fait référence à l'instance courante.
         this.vitesse = vitesse;
         this.couleur = couleur;
+    }
+
+    public int getX() {
+        return position.getX();
     }
 
     public int getVitesse() {
@@ -34,14 +36,13 @@ public class Pizza {
     }
 
     public void avancerX() {
-        x += vitesse;
+        position.setX(position.getX() + vitesse);
     }
 
     @Override
     public String toString() {
         return "Pizza{" +
-                "x=" + x +
-                ", y=" + y +
+                position +
                 ", couleur='" + couleur + '\'' +
                 ", vitesse=" + vitesse +
                 '}';

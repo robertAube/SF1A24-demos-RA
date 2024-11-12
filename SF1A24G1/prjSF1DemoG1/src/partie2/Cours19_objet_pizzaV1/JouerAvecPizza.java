@@ -1,20 +1,23 @@
-package partie2.Cours20_objet;
+package partie2.Cours19_objet_pizzaV1;
 
 public class JouerAvecPizza {
     public JouerAvecPizza() {
+
         //creerUnePizza();
         //jouerAvecNPizza();
 
         //tester_getSetVitesse();
-        vitesseSaisieParUsager();
+        vitesseSaisiParUsager();
     }
 
-    private void vitesseSaisieParUsager() {
+    private void vitesseSaisiParUsager() {
         Pizza p;
         int vitesseLu;
 
+
         do {
             vitesseLu = Util.lireInt("Donnez la vitesse : ");
+
         } while (!Pizza.vitesseEstValide(vitesseLu));
 
         p = new Pizza(1,2,"jaune", 1);
