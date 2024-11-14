@@ -1,4 +1,4 @@
-package partie2.cours20_Objet_pizzaV2;
+package partie2.Cours21_tabDePizzas;
 
 public class Pizza {
     //Attributs ou des variables d'instance

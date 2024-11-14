@@ -1,11 +1,34 @@
 package partie2.cours20_Objet_pizzaV2;
 
+import partie2.Cours21_tabDePizzas.Coordonnee;
+import partie2.Cours21_tabDePizzas.Pizza;
+import partie2.Cours21_tabDePizzas.Util;
+
 public class JouerAvecPizza {
     public JouerAvecPizza() {
 //        creerUnePizza();
-        jouerAvecNPizza(6);
+        // jouerAvecNPizza(6);
+        tester_mutateurAccesseur();
 //        tester_getEtSetVitesse();
 //        vitesseSaisieParUsager();
+    }
+
+    private void tester_mutateurAccesseur() {
+        Pizza p;
+
+        p = new Pizza(0, 0, 1, "bleu");
+
+        System.out.println(p);
+
+        p.setPositionV1(new Coordonnee(1,2));
+
+        System.out.println(p);
+        p.setPositionV2(new Coordonnee(2,3));
+
+        System.out.println(p);
+        p.setPositionV3(new Coordonnee(3,4));
+
+        System.out.println(p);
     }
 
     private void jouerAvecNPizza(int n) {
