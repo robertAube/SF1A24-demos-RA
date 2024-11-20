@@ -21,6 +21,7 @@ public class JouerAvecPizza {
         } while (!Pizza.vitesseEstValide(vitesseLu));
 
         p = new Pizza(1,2,"jaune", 1);
+
         p.setVitesse(vitesseLu);
 
         System.out.println("La vitesse est de " + p.getVitesse());

@@ -27,6 +27,12 @@ public class Util {
 
         return reponse;
     }
+    private static void classeEnveloppe() {
+        Integer i = 4;
+        i = 5;
+        
+
+    }
 
     private static void afficherQuestion(String question) {
         System.out.print(question);

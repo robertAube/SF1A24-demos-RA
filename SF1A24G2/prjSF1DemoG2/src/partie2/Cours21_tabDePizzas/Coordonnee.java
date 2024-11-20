@@ -34,6 +34,20 @@ public class Coordonnee {
         }
     }
 
+    public Coordonnee get() {
+        Coordonnee c;
+
+        c = new Coordonnee(x, y);
+
+        return c;
+    }
+
+    public void set(Coordonnee c) {
+//        setX(c.x); // pas nécessaire: x repecte déjà les contraintes de validation d'une Coordonnee
+        x = c.x;
+        y = c.y;
+    }
+
     public static boolean xyEstValide(int valeur) {
         return MIN_XY <= valeur && valeur <= MAX_XY;
     }
@@ -45,6 +59,28 @@ public class Coordonnee {
 
     public int getY() {
         return y;
+    }
+
+
+    @Override //écrase la definition de la classe Object
+    public boolean equals(Object o) { //Object : toutes les instances en java sont de type Objet.
+        //this c'est l'adresse de ma propre instance.
+        if (this == o) {  // retourner true si l'objet reçu en argument est le même que l'objet courant (this)
+            return true;
+        }
+
+        if (o == null) { // Retourner false si l'objet reçu en argument ne réfère pas à une instance. (null)
+            return false;
+        }
+
+        if (getClass() != o.getClass()) { //Retourner faux si l'objet o n'est pas une coordonnée.
+            return false;
+        }
+
+        Coordonnee that = (Coordonnee) o; //Caster la variable o en variable Coordonnee.
+
+        if (x != ((Coordonnee)o).x) return false;
+        return y == that.y;
     }
 
     @Override

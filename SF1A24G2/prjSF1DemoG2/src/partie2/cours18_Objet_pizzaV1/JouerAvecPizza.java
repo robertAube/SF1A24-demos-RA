@@ -64,6 +64,8 @@ public class JouerAvecPizza {
 
         p = new Pizza(0, 0, -1, "bleu");
 
+        p.hashCode();
+
         System.out.println(p);
 
         System.out.println(p.getVitesse());

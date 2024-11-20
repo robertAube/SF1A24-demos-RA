@@ -1,15 +1,15 @@
 package partie2.Cours21_tabDePizzas;
 
-public class TabPizzas {
+public class ListePizzas {
     public static final int NB_PIZZA_PAR_DEFAUT = 0;
     private Pizza[] tabPizza;
 
-    public TabPizzas() {
+    public ListePizzas() {
 //        int a; //l'appel à un autre constructeur doit être la première ligne de code du constructeur
         this(NB_PIZZA_PAR_DEFAUT); //appelle le constructeur avec un argument
     }
 
-    public TabPizzas(int nbPizza) {
+    public ListePizzas(int nbPizza) {
         creerTabPizza(nbPizza);
     }
 

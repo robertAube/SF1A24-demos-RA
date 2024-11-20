@@ -6,11 +6,11 @@ public class Tester_TabPizzas {
     }
 
     private void tester_creerPizza() {
-        TabPizzas tabPizza = new TabPizzas();
+        ListePizzas tabPizza = new ListePizzas();
 
         System.out.println(tabPizza);
 
-        tabPizza = new TabPizzas(8);
+        tabPizza = new ListePizzas(8);
 
         System.out.println(tabPizza);
 

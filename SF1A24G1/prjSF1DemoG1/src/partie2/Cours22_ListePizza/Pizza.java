@@ -1,6 +1,4 @@
-package partie2.Cours20_objet_pizzaV2;
-
-import javax.swing.text.Position;
+package partie2.Cours22_ListePizza;
 
 public class Pizza {
     //Attributs ou variables d'instance

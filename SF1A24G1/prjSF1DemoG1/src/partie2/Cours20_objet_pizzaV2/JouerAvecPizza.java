@@ -7,7 +7,23 @@ public class JouerAvecPizza {
 
         //tester_getSetVitesse();
         //vitesseSaisieParUsager();
-        avancerDesPizzas();
+        // avancerDesPizzas();
+
+        tester_mutateurAccesseur();
+    }
+
+    private void tester_mutateurAccesseur() {
+        Pizza p;
+        Coordonnee c = new Coordonnee(4,8);
+
+        p = new Pizza(2, 3, "bleu", 1);
+
+        System.out.println(p);
+
+        p.setPositionV3(c);
+        System.out.println(p);
+        c.setX(100);
+        System.out.println(p);
     }
 
     private void avancerDesPizzas() {
