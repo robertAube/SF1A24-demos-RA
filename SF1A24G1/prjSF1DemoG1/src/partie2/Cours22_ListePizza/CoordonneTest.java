@@ -2,7 +2,61 @@ package partie2.Cours22_ListePizza;
 
 public class CoordonneTest {
     public CoordonneTest() {
-        tester_GetSetDeLObjet();
+       // tester_GetSetDeLObjet();
+        tester_equals();
+    }
+
+    private void tester_equals() {
+        boolean estReussi = true;
+
+        estReussi &= retourneVraiSiCEstLeMemeObjet() == true;
+        estReussi &= retourneFauxSiObjetEnArgumentEstNull() == false;
+        estReussi &= retourneFauxSiObjetEnArgumentEstDeTypeDifferent() == false;
+        estReussi &= retourneFauxSiXestDifferrent() == false;
+        estReussi &= retourneVraiSiXEgalEtYaussi() == true;
+        estReussi &= retourneFauxSiXEgalEtYEstDifferent() == false;
+
+        System.out.println("equals() " + (estReussi ? "fonctionne" : "ne fonctionne pas"));
+    }
+
+    private boolean retourneFauxSiXEgalEtYEstDifferent() {
+        Coordonnee c1 = new Coordonnee(1, 2);
+        Coordonnee c2 = new Coordonnee(1, 1);
+
+        return c1.equals(c2);
+    }
+
+    private boolean retourneVraiSiXEgalEtYaussi() {
+        Coordonnee c1 = new Coordonnee(1, 2);
+        Coordonnee c2 = new Coordonnee(1, 2);
+
+        return c1.equals(c2);
+    }
+
+    private boolean retourneFauxSiXestDifferrent() {
+        Coordonnee c1 = new Coordonnee(1, 2);
+        Coordonnee c2 = new Coordonnee(2, 2);
+
+        return c1.equals(c2);
+    }
+
+    private boolean retourneFauxSiObjetEnArgumentEstDeTypeDifferent() {
+        Coordonnee c1 = new Coordonnee(1, 2);
+
+        return c1.equals("Allo");
+    }
+
+    private boolean retourneFauxSiObjetEnArgumentEstNull() {
+        Coordonnee c1 = new Coordonnee(1, 2);
+        Coordonnee c2 = null;
+
+        return c1.equals(c2);
+    }
+
+    private boolean retourneVraiSiCEstLeMemeObjet() {
+       Coordonnee c1 = new Coordonnee(1, 2);
+
+       return c1.equals(c1);
     }
 
     private void tester_GetSetDeLObjet() {

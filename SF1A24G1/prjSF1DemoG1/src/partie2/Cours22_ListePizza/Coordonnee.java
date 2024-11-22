@@ -63,8 +63,10 @@ public class Coordonnee {
     @Override
     public boolean equals(Object o) {
         //this c'est l'adresse de ma propre instance
-        if (this == o) return true; // retourner true si l'objet reçu en argument est moi-même.
-        if (o == null)  { //si l'objet reçu en argument est null
+        if (this == o) { // retourner true si l'objet reçu en argument est moi-même.
+            return true;
+        }
+        if (o == null) { //si l'objet reçu en argument est null
             return false;
         }
         if (getClass() != o.getClass()) { //Retourne faux si l'objet o n'est pas une coordonnée
@@ -73,8 +75,30 @@ public class Coordonnee {
 
         Coordonnee that = (Coordonnee) o; //Caster la variable o en variable coordonnée
 
-        if (x != that.x) return false;
+        if (x != that.x) {
+            return false;
+        }
+
         return y == that.y;
+    }
+
+    public boolean equalsV2(Object o) {
+        //this c'est l'adresse de ma propre instance
+        if (this == o) { // retourner true si l'objet reçu en argument est moi-même.
+            return true;
+        }
+        if (o == null) { //si l'objet reçu en argument est null
+            return false;
+        }
+        if (getClass() != o.getClass()) { //Retourne faux si l'objet o n'est pas une coordonnée
+            return false;
+        }
+
+        if (x != ((Coordonnee)o).x) {
+            return false;
+        }
+
+        return y == ((Coordonnee)o).y;
     }
 
     public String toString() {

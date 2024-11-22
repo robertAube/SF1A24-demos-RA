@@ -11,7 +11,6 @@ public class Coordonnee {
     private int x;
     private int y;
 
-
     public Coordonnee(int x, int y) {
         setX(x);
         setY(y);
@@ -79,7 +78,10 @@ public class Coordonnee {
 
         Coordonnee that = (Coordonnee) o; //Caster la variable o en variable Coordonnee.
 
-        if (x != ((Coordonnee)o).x) return false;
+        if (x != ((Coordonnee)o).x) {
+            return false;
+        }
+
         return y == that.y;
     }
 
